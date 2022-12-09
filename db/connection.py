@@ -8,7 +8,7 @@ from mysql.connector import errorcode
 config = {
   'host': 'freeworlddb.cnoo5dxelb2s.ap-northeast-2.rds.amazonaws.com',
   'user': 'freeworlduser',
-  'password': util.crypto.SimpleEnDecrypt(config.ende_key, config.access_key),
+  'password': util.crypto.SimpleEnDecrypt(config.access_key),
   'database': 'freeworldDB',
 }
 
