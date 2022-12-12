@@ -22,7 +22,7 @@ def startChromeDriver(url):
     # 옵션 설정
     options = webdriver.ChromeOptions()
     options.add_argument("lang=ko_KR")
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     options.add_argument(
         "user-agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'")

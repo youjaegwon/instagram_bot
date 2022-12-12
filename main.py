@@ -76,6 +76,6 @@ try:
         log.info("refresh for : ", tags[refresh_count % len(tags)])
 except:
     log.error("예기치 못한 오류가 발생하였습니다")
-else:
+finally:
     browser.close()
     log.info("***************크롤링 종료***************")
