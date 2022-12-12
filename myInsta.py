@@ -32,7 +32,7 @@ def setListHashTag():
 
     for tag in tags:
         tagObj = getHashTag(tag['dsdl_grp_cd'], tag['dsdl_item_cd'])
-        if tagObj is None:
+        if tagObj[0] is None:
             params = (tag['dsdl_grp_cd'], tag['dsdl_item_cd'], tag['dsdl_item_nm'], tag['acvt_stts'], tag['otpt_sqnc'], 'SYSTEM',
                       utils.getNowDateTime('%Y%m%d%H%M%S'))
             rowCnt = db.queries.등록_구분자항목(params)
