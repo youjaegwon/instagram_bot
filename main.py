@@ -1,12 +1,15 @@
 import db.connection
+import datetime
 
 # Drop previous table of same name if one 
 conn = db.connection.dbCon()
 cursor = conn.cursor()
 
+now = datetime.datetime.utcnow()
+
 # Insert some data into table
 sqlQuery = "INSERT INTO dsdl_item (dsdl_grp_cd, dsdl_item_cd, dsdl_item_nm, acvt_stts, otpt_sqnc, reg_user_id, reg_dtm) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-params = ('A0001', 'A0003', '맞팔', 'Y', 0, 'SYSTEM', 'DATE_FORMAT(now(), "%Y%m%d%H%i%s")')
+params = ('A0001', 'A0003', '맞팔', 'Y', 0, 'SYSTEM', now.strftime('%Y%m%d%H%M%S'))
 cursor.execute(sqlQuery, params)
 print("Inserted",cursor.rowcount,"row(s) of data.")
 
