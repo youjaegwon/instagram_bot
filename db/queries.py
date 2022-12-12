@@ -1,11 +1,8 @@
-import connection
-import datetime
+import db.connection
 
 # Drop previous table of same name if one
-conn = connection.dbCon()
+conn = db.connection.dbCon()
 cursor = conn.cursor()
-
-now = datetime.datetime.utcnow()
 
 
 def 등록_구분자항목(params):
