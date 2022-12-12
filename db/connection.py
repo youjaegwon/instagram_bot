@@ -1,8 +1,11 @@
-import mysql.connector
-import config
-
-from util import crypto
 from mysql.connector import errorcode
+from util import crypto
+import config
+import mysql.connector
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+
 
 # Obtain connection string information from the portal
 simpleEnDecrypt = crypto.SimpleEnDecrypt(config.ende_key)
