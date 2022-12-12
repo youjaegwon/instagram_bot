@@ -11,7 +11,7 @@ def setListHashTag():
     cnt = 0
     dsdlGrpCd = 'A0001'
     tags = [{'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0002',
-             'dsdl_item_nm': '좋아요', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '좋아요', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0003',
              'dsdl_item_nm': '데일리', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0004',
