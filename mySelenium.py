@@ -63,8 +63,9 @@ def closePopInfo(browser, By, xPath):
 
 
 def searchTag(browser, tag):
-    log.info("태그 검색하기")
-    browser.get('https://www.instagram.com/explore/tags/' + tag[0])
+    browserUrl = 'https://www.instagram.com/explore/tags/' + tag[0]
+    log.info("태그 검색하기" + browserUrl)
+    browser.get(browserUrl)
 
 # 다음 게시물 이동하기
 
