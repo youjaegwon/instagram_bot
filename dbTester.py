@@ -21,7 +21,7 @@ rows = cursor.fetchall()
 print("Read", cursor.rowcount, "row(s) of data.")
 # Print all rows
 for row in rows:
-    print("Data row = (%s)" % (str(row["dsdl_grp_cd"])))
+    print("Data row = (%s)" % (row))
 
 # # Update a data row in the table
 # cursor.execute("UPDATE inventory SET quantity = %s WHERE name = %s;", (300, "apple"))
