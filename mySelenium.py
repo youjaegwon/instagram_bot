@@ -12,7 +12,7 @@ simpleEnDecrypt = util.crypto.SimpleEnDecrypt(config.ende_key)
 
 def startChromeDriver(url):
     chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[0]
-    driver_path = f'./{chrome_ver}/chromedriver.exe'
+    driver_path = f'./{chrome_ver}/chromedriver'
     if os.path.exists(driver_path):
         log.info(f"이미 설치된 크롬 드라이버: {driver_path}")
     else:
