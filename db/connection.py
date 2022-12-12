@@ -1,21 +1,23 @@
 import mysql.connector
-import util.crypto
 import config
 
+from util import crypto
 from mysql.connector import errorcode
 
 # Obtain connection string information from the portal
-simpleEnDecrypt = util.crypto.SimpleEnDecrypt(config.ende_key)
+simpleEnDecrypt = crypto.SimpleEnDecrypt(config.ende_key)
 
 config = {
-  'host': 'freeworlddb.cnoo5dxelb2s.ap-northeast-2.rds.amazonaws.com',
-  'user': 'freeworlduser',
-  'password': simpleEnDecrypt.decrypt(config.access_key),
-  'database': 'freeworldDB',
+    'host': 'freeworlddb.cnoo5dxelb2s.ap-northeast-2.rds.amazonaws.com',
+    'user': 'freeworlduser',
+    'password': simpleEnDecrypt.decrypt(config.access_key),
+    'database': 'freeworldDB',
 }
 
 # Construct connection string
-def dbCon() :
+
+
+def dbCon():
     try:
         conn = mysql.connector.connect(**config)
         print("Connection established")
