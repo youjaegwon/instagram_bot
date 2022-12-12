@@ -2,11 +2,6 @@ from mysql.connector import errorcode
 import util.crypto
 import config
 import mysql.connector
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-
-
 # Obtain connection string information from the portal
 simpleEnDecrypt = util.crypto.SimpleEnDecrypt(config.ende_key)
 
