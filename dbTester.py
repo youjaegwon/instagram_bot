@@ -12,7 +12,7 @@ rowcount = db.queries.등록_구분자항목(params)
 print("Inserted", rowcount, "row(s) of data.")
 
 print("2. 조회")
-params = ('A0001')
+params = {'dsdl_grp_cd': "A0001"}
 rows = db.queries.조회_구분자항목(params)
 for row in rows:
     print("Data row = (%s)" % (row[0]))

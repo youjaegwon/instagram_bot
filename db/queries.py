@@ -12,7 +12,7 @@ def 등록_구분자항목(params):
 
 
 def 조회_구분자항목(params):
-    sqlQuery = "SELECT dsdl_grp_cd, dsdl_item_cd, dsdl_item_nm, acvt_stts, otpt_sqnc, reg_user_id, reg_dtm FROM dsdl_item WHERE dsdl_grp_cd = (%s)"
+    sqlQuery = "SELECT dsdl_grp_cd, dsdl_item_cd, dsdl_item_nm, acvt_stts, otpt_sqnc, reg_user_id, reg_dtm FROM dsdl_item WHERE dsdl_grp_cd = %(dsdl_grp_cd)s"
     cursor.execute(sqlQuery, params)
     rows = cursor.fetchall()
     return rows
