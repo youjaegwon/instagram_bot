@@ -29,5 +29,3 @@ def dbCon():
             print("Database does not exist")
         else:
             print(err)
-    finally:
-        conn.close()
