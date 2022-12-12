@@ -13,21 +13,21 @@ def setListHashTag():
     tags = [{'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0002',
              'dsdl_item_nm': '좋아요', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0003',
-             'dsdl_item_nm': '데일리', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '데일리', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0004',
-             'dsdl_item_nm': '팔로우', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '팔로우', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0005',
-             'dsdl_item_nm': '좋아요반사', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '좋아요반사', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0006',
-             'dsdl_item_nm': '맞팔', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '맞팔', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0007',
-             'dsdl_item_nm': '일상', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '일상', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0008',
-             'dsdl_item_nm': '선팔', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '선팔', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0009',
-             'dsdl_item_nm': '소통', 'acvt_stts': 'Y', 'ocpt_sqnc': 0},
+             'dsdl_item_nm': '소통', 'acvt_stts': 'Y', 'otpt_sqnc': 0},
             {'dsdl_grp_cd': 'A0001', 'dsdl_item_cd': 'A0010',
-             'dsdl_item_nm': '일상기록', 'acvt_stts': 'Y', 'ocpt_sqnc': 0}]
+             'dsdl_item_nm': '일상기록', 'acvt_stts': 'Y', 'otpt_sqnc': 0}]
     delHashTag(dsdlGrpCd)
 
     for tag in tags:
