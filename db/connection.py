@@ -1,5 +1,5 @@
 from mysql.connector import errorcode
-from util import crypto
+import util.crypto
 import config
 import mysql.connector
 import os
@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 
 # Obtain connection string information from the portal
-simpleEnDecrypt = crypto.SimpleEnDecrypt(config.ende_key)
+simpleEnDecrypt = util.crypto.SimpleEnDecrypt(config.ende_key)
 
 config = {
     'host': 'freeworlddb.cnoo5dxelb2s.ap-northeast-2.rds.amazonaws.com',
