@@ -1,5 +1,6 @@
 import db.queries
 import datetime
+from util import utils
 
 now = datetime.datetime.utcnow()
 
@@ -7,7 +8,7 @@ print("========= 구분자 DB Tester Start =========")
 
 print("1. 등록")
 params = ('A0001', 'A0006', '일상', 'Y', 0,
-          'SYSTEM', now.strftime('%Y%m%d%H%M%S'))
+          'SYSTEM', utils.getNowDateTime('%Y%m%d%H%M%S'))
 rowcount = db.queries.등록_구분자항목(params)
 print("Inserted", rowcount, "row(s) of data.")
 
