@@ -17,7 +17,9 @@ config = {
 
 def dbCon():
     try:
-        conn = mysql.connector.connect(**config)
+        conn = mysql.connector.connect(pool_name="mypool",
+                                       pool_size=3,
+                                       **config)
         print("Connection established")
         return conn
     except mysql.connector.Error as err:
