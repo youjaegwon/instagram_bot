@@ -71,8 +71,8 @@ try:
                     browser, By, '/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[1]/div/div/div[2]/button')
 
         refresh_count += 1
-        browser.get('https://www.instagram.com/explore/tags/' +
-                    tags[refresh_count % len(tags)])
+        # 태그 검색 하기
+        mySelenium.searchTag(browser, tags[refresh_count % len(tags)])
         log.info("refresh for : ", tags[refresh_count % len(tags)])
 except:
     log.error("예기치 못한 오류가 발생하였습니다")
