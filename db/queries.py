@@ -13,6 +13,18 @@ def 등록_구분자항목(params):
     return cursor.rowcount
 
 
+def 조회_구분자리스트(params):
+    conn = db.connection.dbCon()
+    cursor = conn.cursor()
+    sqlQuery = "SELECT dsdl_item_nm FROM dsdl_item WHERE dsdl_grp_cd = %(dsdl_grp_cd)s AND acvt_stts = 'Y' ORDER BY otpt_sqnc ASC"
+    cursor.execute(sqlQuery, params)
+    rows = cursor.fetchall()
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return rows
+
+
 def 조회_구분자항목(params):
     conn = db.connection.dbCon()
     cursor = conn.cursor()

@@ -1,5 +1,5 @@
 import logging
-import utils
+from util import utils
 
 nowDt = utils.getNowDateTime('%Y%m%d')
 
@@ -7,7 +7,7 @@ nowDt = utils.getNowDateTime('%Y%m%d')
 logger = logging.getLogger()
 
 # 로그의 출력 기준 설정
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 # log 출력 형식
 formatter = logging.Formatter(
@@ -22,5 +22,3 @@ logger.addHandler(stream_handler)
 file_handler = logging.FileHandler(f'log/default_{nowDt}.log')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
-
-logger.info("테스트")

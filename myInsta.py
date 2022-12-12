@@ -1,6 +1,9 @@
 import db.queries
 import datetime
 from util import utils
+from util import logger
+
+log = logger.logger
 
 # 태그 등록 함수
 
@@ -42,13 +45,22 @@ def setListHashTag():
             cnt += rowCnt
     print("태그 : ", cnt, "개 등록 완료")
 
-# 태그 조회 함수
+# 태그 상세 조회 함수
 
 
 def getHashTag(dsdlGrpCd, dsdlItemCd):
     print("태그 조회")
     params = {'dsdl_grp_cd': dsdlGrpCd, 'dsdl_item_cd': dsdlItemCd}
     row = db.queries.조회_구분자항목(params)
+    return row
+
+# 태그 리스트 조회 함수
+
+
+def getHashTagList(dsdlGrpCd):
+    log.info("태그 조회")
+    params = {'dsdl_grp_cd': dsdlGrpCd}
+    row = db.queries.조회_구분자리스트(params)
     return row
 
 # 태그 수정 함수
