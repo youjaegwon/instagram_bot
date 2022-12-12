@@ -5,7 +5,7 @@ from util import utils
 # 태그 등록 함수
 
 
-def setListHashTag(tags):
+def setListHashTag():
     print("태그 대량 등록 시작")
 
     cnt = 0
