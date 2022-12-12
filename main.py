@@ -9,7 +9,6 @@ import myInsta
 # import time
 # import logging
 
-myInsta.setListHashTag()
 # # 로거 세팅
 # logger = logging.getLogger("postprocessor")
 # logger.setLevel(logging.DEBUG)
@@ -44,8 +43,6 @@ myInsta.setListHashTag()
 
 # total_like_count = 150
 
-# #광고성글이 포함하고 있는 단어 리스트
-# block_text_list = ['부업', '광고', '협찬' ,'협찬', '재테크', '출금', '공짜', '수익', '카톡', '원금', '할인', '이벤트', '부자', 'Repost', '구매', '예약', '영업', '문의전화', '오시는', '주소' ]
 
 # #화면 띄우기
 # options = webdriver.ChromeOptions()
