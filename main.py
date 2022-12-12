@@ -74,8 +74,8 @@ try:
         # 태그 검색 하기
         mySelenium.searchTag(browser, tags[refresh_count % len(tags)])
         log.info("refresh for : ", tags[refresh_count % len(tags)])
-except:
-    log.error("예기치 못한 오류가 발생하였습니다")
+except Exception as e:
+    log.error("예기치 못한 오류가 발생하였습니다 ===>", e)
 finally:
     browser.close()
     log.info("***************크롤링 종료***************")
