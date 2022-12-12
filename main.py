@@ -15,12 +15,13 @@ now = datetime.datetime.utcnow()
 # print("Inserted", cursor.rowcount, "row(s) of data.")
 
 # # Read data
-cursor.execute("SELECT * FROM dsdl_item")
+cursor.execute(
+    "SELECT dsdl_grp_cd, dsdl_item_cd, dsdl_item_nm, acvt_stts, otpt_sqnc, reg_user_id, reg_dtm FROM dsdl_item")
 rows = cursor.fetchall()
 print("Read", cursor.rowcount, "row(s) of data.")
 # Print all rows
 for row in rows:
-    print("Data row = (%s)" % (str(row)))
+    print("Data row = (%s)" % (str(row["dsdl_grp_cd"])))
 
 # # Update a data row in the table
 # cursor.execute("UPDATE inventory SET quantity = %s WHERE name = %s;", (300, "apple"))
